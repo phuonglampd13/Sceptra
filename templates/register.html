@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+
+    <form action="/register" method="post" class="bg-5 form">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password" required>
+        </div>
+
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="confirmation" placeholder="Confirmation" type="password" required>
+        </div>
+        
+        {% if messages %}
+            {% for message in messages %}
+                <div class="mb-3">
+                    <span class="{{ 'error' if message.category == 'error' else 'success' }}">{{ message.message }}</span>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <button class="btn btn-primary" type="submit">Register</button>
+
+    </form>
+    <div class="mb-3 p-1">
+        <span class="text-white">Da co tai khoan <a class="link-primary" href="./login">login</a></span>
+    </div>
+
+        
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    ADD
+{% endblock %}
+
+{% block main %}
+    <!-- Kết nối file CSS -->
+    <link rel="stylesheet" href="/static/buy.css">
+
+    <div class="container">
+        <!-- Hiển thị số tiền hiện có -->
+        <div class="cash-display">
+            <span>Your Cash:</span>
+            <span class="cash">{{ cash | usd}}</span>
+        </div>
+
+        <!-- Form mua coin -->
+        <form action="/cash_out" method="post" class="form">
+            <div class="form-group">
+                <input 
+                    autocomplete="off" 
+                    autofocus 
+                    class="form-control" 
+                    name="amount" 
+                    placeholder="($)0.00" 
+                    type="text" 
+                    required>
+            </div>
+            <button class="btn btn-primary" type="submit">OUT</button>
+
+            <!-- Hiển thị thông báo lỗi hoặc thành công -->
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <div class="message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </form>
+
+    </div>
+{% endblock %}

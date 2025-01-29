@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<link rel="stylesheet" href="/static/index.css">
+<link rel="shortcut icon" href="4.jpg" type="image/x-icon">
+
+<div class="container">
+    <h1>History</h1>
+    <table class="table">
+        <tr class="row">
+            <th class="col">Symbol</th>
+            <th class="col">Type</th>
+            <th class="col">Amount</th>
+            <th class="col">Price</th>
+            <th class="col">Total Cost</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr class="row">
+            <th class="col">{{transaction.symbol}}</th>
+            <th class="col">{{transaction.transaction_type}}</th>
+            <th class="col">{{transaction.amount | abs}}</th>
+            <th class="col">{{transaction.price | usd}}</th>
+            <th class="col">{{transaction.total_cost | usd}} </th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

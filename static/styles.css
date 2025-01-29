@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+/* Nền tổng thể: Sang trọng, quyền lực */
+body {
+    background: linear-gradient(to right, #111, #222);
+    color: #FFD700; /* Màu vàng kim loại */
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* Tiêu đề chính */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    color: #FFD700;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.cash-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: #f5c518;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cash-display span:last-child {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+:root {
+    --color-primary: #FCD535;
+    --color-bg1: #181A20;
+    --color-bg2: #5E6673;
+    --color-bg3: #272C34;
+    --color-bg4: #2B3139;
+    --color-bg5: #ccc;
+    --color-primaryHover: #F0B90B;
+    --color-error: #F6465D;
+    --color-errorBg: #35141D;
+    --color-success: #0ECB81;
+    --color-successBg: #102821;
+    --color-disable: #474D57;
+    --color-iconNormal: #848E9C;
+    --color-textWhite: #FFFFFF;
+    --color-textGray: #EAECEF;
+    --color-textBlack: #0B0E11;
+    --color-textPrimary: #EAECEF;
+
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.border {
+    outline: none !important;
+    border: none !important;
+}
+
+.form {
+    width: fit-content;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.navbar-brand {
+    color: var(--color-primary);
+}
+
+.navbar-brand:hover {
+    color: var(--color-primaryHover);
+    opacity: 0.8;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-1 {
+    background-color: var(--color-bg1) !important;
+}
+
+.bg-2 {
+    background-color: var(--color-bg2);
+}
+
+.bg-2:hover {
+    background-color: var(--color-bg2);
+    opacity: 0.5;
+}
+
+.bg-4 {
+    background-color: var(--color-bg4);
+}
+
+.bg-5 {
+    background-color: var(--color-bg5);
+}
+
+.link-primary {
+    color: var(--color-primary) !important;
+    /* text-decoration: ; */
+}
+
+.link-primary:hover {
+    color: var(--color-primaryHover) !important;
+}
+
+.primary-text {
+    color: var(--color-textPrimary)  !important;
+}
+
+.nav-link {
+    color: var(--color-textPrimary)  !important;
+}
+
+.nav-item.btn {
+    padding: 0;
+    margin: 0 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-textBlack);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primaryHover) !important;
+}
+
+.tradingview-widget-container {
+    height: 100px;
+}

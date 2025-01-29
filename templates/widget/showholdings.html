@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/static/index.css">
+    <link rel="shortcut icon" href="4.jpg" type="image/x-icon">
+
+    <div class="container">
+        <h1>Sceptra</h1>
+        <table class="table">
+            <tr class="row">
+                <th class="col">Cryptocurrency</th>
+                <th class="col">Symbol</th>
+                <th class="col">Amount</th>
+                <th class="col">Price</th>
+                <th class="col">Total</th>
+            </tr>
+            {% for crypto in holdings %}
+            <tr class="row">
+                <td class="col">{{ crypto.name }}</td>
+                <td class="col">{{ crypto.symbol }}</td>
+                <td class="col">{{ crypto.amount }}</td>
+                <td class="col">{{ crypto.price | usd}}</td>
+                <td class="col">{{ crypto.total | usd }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>

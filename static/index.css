@@ -1,0 +1,85 @@
+/* Import font sang trọng */
+
+/* Bảng chứa dữ liệu */
+.table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header bảng */
+.table th {
+    background: linear-gradient(to right, #D4AF37, #FFD700);
+    color: black;
+    font-size: 1.2rem;
+    padding: 15px;
+    text-transform: uppercase;
+    border-bottom: 3px solid gold;
+}
+
+/* Các dòng dữ liệu */
+.table td {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Hiệu ứng hover */
+.table tr:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transition: 0.3s;
+}
+
+/* Định dạng cột dữ liệu */
+.col {
+    text-align: center;
+}
+
+/* Bo góc cột đầu tiên và cuối cùng */
+.table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* Phong cách quyền lực cho giá trị tiền */
+td:nth-child(4), td:nth-child(5) {
+    font-weight: 700;
+    color: #FFD700;
+}
+
+/* Hiệu ứng ánh sáng */
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; }
+    50% { text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700; }
+    100% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; }
+}
+
+h1, .table th {
+    animation: glowing 1.5s infinite alternate;
+}
+
+/* Nút quyền lực */
+.btn-gold {
+    background: linear-gradient(to right, #D4AF37, #FFD700);
+    color: black;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: linear-gradient(to right, #FFD700, #D4AF37);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    transform: scale(1.05);
+}

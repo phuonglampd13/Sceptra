@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    {% include './widget/showholdings.html' %}
+    <div class="cash-display">
+        <span>Your Cash:</span>
+        <span class="cash">{{ cash | usd}}</span>
+    </div>
+{% endblock %}
